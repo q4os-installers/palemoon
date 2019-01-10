@@ -1,0 +1,28 @@
+ <!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+  "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+<!-- 	<Name></Name> -->
+
+<Menu>
+	<Name>Palemoon</Name>
+	<Directory>palemoon_q4app.directory</Directory>
+	<DefaultLayout show_empty="true">
+		<Merge type="menus"/>
+		<Merge type="files"/>
+	</DefaultLayout>
+	<Layout>
+<!-- 		<Merge type="menus" /> -->
+<!--		<Menuname show_empty="false">Documents</Menuname>
+		<Menuname show_empty="false">Settings</Menuname>-->
+		<Filename>palemoon.desktop</Filename>
+<!-- 		<Separator/> -->
+		<Filename>substitute_application_name_uninstall.desktop</Filename>
+	</Layout>
+	<Include>
+		<Filename>palemoon.desktop</Filename>
+		<Filename>substitute_application_name_uninstall.desktop</Filename>
+	</Include>
+</Menu>
+
+</Menu>
