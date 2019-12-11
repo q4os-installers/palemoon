@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if ! q4hw-info --sse2 ; then
+  sed -i -e "s/[[:space:]]*extra_packages=.*/extra_packages=palemoon-nonsse2/" config_1_rc
+fi
+
+# if [ "$APPSETUP2_NONITERACTIVE" = "1" ] ; then
+#   exit 0
+# fi
