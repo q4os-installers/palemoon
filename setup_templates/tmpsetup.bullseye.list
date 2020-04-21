@@ -1,1 +1,2 @@
+deb [ trusted=yes ] http://q4os.org/qextrepo bullseye-palemoon-cn main
 deb [ trusted=yes ] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_Testing/ /
