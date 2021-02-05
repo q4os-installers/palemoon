@@ -3,25 +3,22 @@ set -e
 
 case "$1" in
     install)
-      echo "Q4OS preinst message: This is new Palemoon installation"
     ;;
 
     upgrade)
-      echo "Q4OS preinst message: Upgrading Palemoon $2"
     ;;
 
     abort-upgrade)
     ;;
 
     *)
-      echo "Postinst called with unknown argument \`$1'" >&2
+      echo "postinst called with unknown argument \`$1'" >&2
       exit 0
     ;;
 esac
 
-set +e #do not exit this script on error
+set +e #don't exit on error
 
-#remove expired keys
 echo "Removing possible expired keys .."
 apt-key del "F961 1EC6 ADCF DD30 3362 217A 0FAD 31CA 8719 FCE4"
 
