@@ -1,2 +1,2 @@
 deb [ trusted=yes ] http://q4os.org/qextrepo buster-palemoon-cn main
-##deb [ trusted=yes ] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_10/ /
+##deb [ trusted=yes ] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_11/ /
