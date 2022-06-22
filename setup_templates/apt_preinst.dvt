@@ -20,7 +20,7 @@ esac
 set +e #don't exit on error
 
 echo "Removing possible expired keys .."
-apt-key --keyring "/etc/apt/trusted.gpg" del "F961 1EC6 ADCF DD30 3362 217A 0FAD 31CA 8719 FCE4"
+APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE="1" apt-key --keyring "/etc/apt/trusted.gpg" del "F961 1EC6 ADCF DD30 3362 217A 0FAD 31CA 8719 FCE4"
 
 set -e
 
