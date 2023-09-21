@@ -1,2 +1,0 @@
-deb http://q4os.org/qextrepo bullseye-palemoon-cn main
-deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_11/ /

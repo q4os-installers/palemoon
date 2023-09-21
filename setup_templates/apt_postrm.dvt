@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+if [ "$1" = remove ] ; then
+  set +e
+
+  echo "Removing Palemoon repositories ..."
+  rm -f /etc/apt/sources.list.d/50_q4os-palemoon.list
+
+#   #remove palemoon as default tde browser
+#   echo "Unsetting Palemoon default web browser ..."
+#   dash /usr/share/apps/q4os_system/bin/set_default_browser.sh "_find_"
+
+  set -e
+fi
