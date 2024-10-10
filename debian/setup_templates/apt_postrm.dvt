@@ -4,7 +4,7 @@ if [ "$1" = remove ] ; then
   set +e
 
   echo "Removing Palemoon repositories ..."
-  rm -f /etc/apt/sources.list.d/50_q4os-palemoon.list
+  rm -f /etc/apt/sources.list.d/50_palemoon-extq.list
 
 #   #remove palemoon as default tde browser
 #   echo "Unsetting Palemoon default web browser ..."

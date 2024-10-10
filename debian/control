@@ -1,0 +1,16 @@
+Source: palemoon-extq
+Section: none
+Priority: optional
+Maintainer: Q4OS Team <devteam@q4os.org>
+Build-Depends: debhelper (>= 9~), q4os-devpack-base
+Standards-Version: 3.8.4
+
+Package: palemoon-extq
+Architecture: all
+Pre-Depends: gnupg, palemoon | palemoon-nonsse2
+Depends: q4os-desktop (>= 4.0), q4os-desktop (<< 6.0)
+Recommends:
+Conflicts: q4os-palemoon
+Replaces: q4os-palemoon
+Breaks:
+Description: Palemmon optimizations for Q4OS
