@@ -14,29 +14,6 @@ set -e
 # the debian-policy package
 #
 
-# # some variables and init
-# NAME=MODULE_NAME
-# PACKAGE_NAME=$NAME-dkms
-# DEB_NAME=$(echo $PACKAGE_NAME | sed 's,_,-,')
-# CVERSION=`dpkg-query -W -f='${Version}' $DEB_NAME | awk -F "-" '{print $1}' | cut -d\: -f2`
-# ARCH=`dpkg --print-architecture`
-
-# # some functions
-# my_function () {
-# 	for POSTINST in /usr/lib/dkms/common.postinst "/usr/share/$PACKAGE_NAME/postinst"; do
-# 		if [ -f "$POSTINST" ]; then
-# 			"$POSTINST" "$NAME" "$CVERSION" "/usr/share/$PACKAGE_NAME" "$ARCH" "$2"
-# 			return $?
-# 		fi
-# 		echo "WARNING: $POSTINST does not exist." >&2
-# 	done
-# 	echo "ERROR: DKMS version is too old and $PACKAGE_NAME was not" >&2
-# 	echo "built with legacy DKMS support." >&2
-# 	echo "You must either rebuild $PACKAGE_NAME with legacy postinst" >&2
-# 	echo "support or upgrade DKMS to a more current version." >&2
-# 	return 1
-# }
-
 case "$1" in
     configure)
       set +e
@@ -48,13 +25,10 @@ case "$1" in
         echo "Distro [$QDSTRA], adding repositories, configuring ..."
         if [ "$QDSTRA" = "bookworm" ] ; then
           echo '###palemoon repositories configured' > "$REPOFL1"
-          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_12/ /' >> "$REPOFL1"
+          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser:/palemoon-GTK3/Debian_12/ /' >> "$REPOFL1"
         elif [ "$QDSTRA" = "bullseye" ] ; then
           echo '###palemoon repositories configured' > "$REPOFL1"
-          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_11/ /' >> "$REPOFL1"
-        elif [ "$QDSTRA" = "buster" ] ; then
-          echo '###palemoon repositories configured' > "$REPOFL1"
-          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_10/ /' >> "$REPOFL1"
+          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser:/palemoon-GTK3/Debian_11/ /' >> "$REPOFL1"
         fi
       fi
 
