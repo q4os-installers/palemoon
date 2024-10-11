@@ -11,7 +11,7 @@
 
 override_dh_install:
 	dh_install
-	mkdir debian/palemoon-extq/
+	#mkdir debian/palemoon-extq/
 	dh_modify_debdir "" debian/palemoon-extq/
 
 override_dh_builddeb:
