@@ -23,7 +23,10 @@ case "$1" in
         # echo "Palemoon seems not to be configured, going to do so ..."
         QDSTRA="$( dash /usr/share/apps/q4os_system/bin/print_qaptdistr.sh )"
         echo "Distro [$QDSTRA], adding repositories, configuring ..."
-        if [ "$QDSTRA" = "bookworm" ] ; then
+        if [ "$QDSTRA" = "trixie" ] ; then
+          echo '###palemoon repositories configured' > "$REPOFL1"
+          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_13/ /' >> "$REPOFL1"
+        elif [ "$QDSTRA" = "bookworm" ] ; then
           echo '###palemoon repositories configured' > "$REPOFL1"
           echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_12/ /' >> "$REPOFL1"
         elif [ "$QDSTRA" = "bullseye" ] ; then
