@@ -25,10 +25,10 @@ case "$1" in
         echo "Distro [$QDSTRA], adding repositories, configuring ..."
         if [ "$QDSTRA" = "bookworm" ] ; then
           echo '###palemoon repositories configured' > "$REPOFL1"
-          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser:/palemoon-GTK3/Debian_12/ /' >> "$REPOFL1"
+          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_12/ /' >> "$REPOFL1"
         elif [ "$QDSTRA" = "bullseye" ] ; then
           echo '###palemoon repositories configured' > "$REPOFL1"
-          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser:/palemoon-GTK3/Debian_11/ /' >> "$REPOFL1"
+          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_11/ /' >> "$REPOFL1"
         fi
       fi
 
