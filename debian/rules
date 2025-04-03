@@ -11,10 +11,15 @@
 
 override_dh_install:
 	dh_install
-	# mkdir debian/palemoon-extq/
-	# dh_modify_debdir "" debian/palemoon-extq/ #todo: remove arguments as new devpack released
+	mkdir debian/palemoon-extq
 	dh_modify_debdir
+
+# override_dh_link:
+
+# override_dh_installdeb:
 
 override_dh_builddeb:
 	dh_builddeb
 	dh_build_qinstaller
+	rm -rf ../.zout/ && mkdir ../.zout/ && mv ../*.qsi ../.zout/
+	cd ../.zout/ && xqtrsetup ; xqtrdeb
