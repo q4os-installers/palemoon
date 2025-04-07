@@ -21,5 +21,5 @@ override_dh_install:
 override_dh_builddeb:
 	dh_builddeb
 	dh_build_qinstaller
-	rm -rf ../.zout/ && mkdir ../.zout/ && mv ../*.qsi ../.zout/
+	rm -rf ../.zout/ && mkdir ../.zout/ && mv ../*.qsi ../.zout/ && cp ../*.deb ../.zout/
 	cd ../.zout/ && xqtrsetup ; xqtrdeb

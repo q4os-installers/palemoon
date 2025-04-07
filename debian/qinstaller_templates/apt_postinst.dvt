@@ -25,13 +25,19 @@ case "$1" in
         echo "Distro [$QDSTRA], adding repositories, configuring ..."
         if [ "$QDSTRA" = "trixie" ] ; then
           echo '###palemoon repositories configured' > "$REPOFL1"
-          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_13/ /' >> "$REPOFL1"
+          echo 'deb https://q4os.sourceforge.io/qexarepo/palemoon trixie-palemoon-cn main' >> "$REPOFL1"
+          echo '##deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_13/ /' >> "$REPOFL1"
+          echo '##deb [signed-by=/usr/share/keyrings/q4a-wmlive_rumbero.gpg trusted=yes] http://wmlive.rumbero.org/repo trixie main' >> "$REPOFL1"
         elif [ "$QDSTRA" = "bookworm" ] ; then
           echo '###palemoon repositories configured' > "$REPOFL1"
-          echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_12/ /' >> "$REPOFL1"
+          echo 'deb https://q4os.sourceforge.io/qexarepo/palemoon bookworm-palemoon-cn main' >> "$REPOFL1"
+          echo '##deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_12/ /' >> "$REPOFL1"
+          echo '##deb [signed-by=/usr/share/keyrings/q4a-wmlive_rumbero.gpg trusted=yes] http://wmlive.rumbero.org/repo bookworm main' >> "$REPOFL1"
         elif [ "$QDSTRA" = "bullseye" ] ; then
           echo '###palemoon repositories configured' > "$REPOFL1"
+          echo 'deb https://q4os.sourceforge.io/qexarepo/palemoon bullseye-palemoon-cn main' >> "$REPOFL1"
           echo 'deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_11/ /' >> "$REPOFL1"
+          echo '##deb [signed-by=/usr/share/keyrings/q4a-wmlive_rumbero.gpg trusted=yes] http://wmlive.rumbero.org/repo bullseye main' >> "$REPOFL1"
         fi
       fi
 

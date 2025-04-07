@@ -1,1 +1,3 @@
-deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_13/ /
+deb https://q4os.sourceforge.io/qexarepo/palemoon trixie-palemoon-cn main
+##deb [signed-by=/usr/share/keyrings/q4a-suse_spusser.gpg trusted=yes] http://download.opensuse.org/repositories/home:/stevenpusser/Debian_13/ /
+##deb [signed-by=/usr/share/keyrings/q4a-wmlive_rumbero.gpg trusted=yes] http://wmlive.rumbero.org/repo trixie main
