@@ -8,7 +8,7 @@ APPNAME_DESC="Palemoon browser"
 
 #-.qsi entries
 # INST_DEBS="palemoon-extq"
-PK_VERS="1.1-a1"
+PK_VERS="1.2-a1"
 Q4VER_MIN="4.0"
 Q4VER_MAX="5.9999"
 # DSTR_BASE="debian;ubuntu"
@@ -17,7 +17,7 @@ QS_ARCHES="amd64;i386"
 LANGUAGE_PACKAGE="palemoon-l10n--xxlangcodexx-"
 # CHK_INET="1"
 # SETUP_TYPE="2"
-INCLUDE_DHDEB="1"
+# INCLUDE_DHDEB="1"
 # CREATE_ESH="1"
 # OUT_DIR="."
 
