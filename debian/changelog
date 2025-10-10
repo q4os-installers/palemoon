@@ -1,3 +1,11 @@
+palemoon-extq (1.2-a2) UNRELEASED; urgency=medium
+
+  * Remove depreciation note
+  * Fix typo
+  * Enable Trixie package
+
+ -- Q4OS Team <devteam@q4os.org>  Fri, 10 Oct 2025 11:40:49 +0200
+
 palemoon-extq (1.2-a1) UNRELEASED; urgency=medium
 
   * Release.
