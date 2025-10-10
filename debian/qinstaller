@@ -8,9 +8,9 @@ APPNAME_DESC="Palemoon browser"
 
 #-.qsi entries
 # INST_DEBS="palemoon-extq"
-PK_VERS="1.2-a1"
+PK_VERS="1.2-a2"
 Q4VER_MIN="4.0"
-Q4VER_MAX="5.9999"
+# Q4VER_MAX="6.9999"
 # DSTR_BASE="debian;ubuntu"
 DSTR_EDTN="trixie;bookworm;bullseye"
 QS_ARCHES="amd64;i386"
